@@ -3,7 +3,7 @@ pipeline{
     environment{
         VENV_DIR ='venv'
         GCP_PROJECT= "gen-lang-client-0866277301"
-        GCLOUD_PATH = "var/jenkins_home/google-cloud-sdk/bin"
+        GCLOUD_PATH = "/var/jenkins_home/google-cloud-sdk/bin"
 
     }
     stages{

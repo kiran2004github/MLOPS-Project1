@@ -56,9 +56,9 @@ pipeline{
                     gcloud auth activate-service-account --key-file=${GOOGLE_APPLICATION_CREDENTIALS}
                     gcloud config set project ${GCP_PROJECT}
                     gcloud run deploy mlops-test \
-                        -- image=gcr.io/${GCP_PROJECT}/mlops-test:latest \
-                        -- platform=manager \
-                        -- region=us-central1 \
+                        --image=gcr.io/${GCP_PROJECT}/mlops-test:latest \
+                        --platform=manager \
+                        --region=us-central1 \
                         --allow-unauthenticated
                     '''
                 }

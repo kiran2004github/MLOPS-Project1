@@ -59,8 +59,7 @@ pipeline{
                         -- image=gcr.io/${GCP_PROJECT}/mlops-test:latest \
                         -- platform=manager \
                         -- region=us-central1 \
-                        --allow-unauthenticated 
-
+                        --allow-unauthenticated
                     '''
                 }
                }

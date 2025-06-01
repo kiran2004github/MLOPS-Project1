@@ -30,7 +30,7 @@ pipeline{
         }
         stage("building and push to gcr"){
             steps{
-               withCredentials([file(credentialsId:'gcp-key',variable: 'GOOGLE_APPLICATION_CREDENTIALS')]){
+               withCredentials([file(credentialsId:'gcp-key',variable:'GOOGLE_APPLICATION_CREDENTIALS')]){
                 script{
                     echo 'building and pushing to gcr'
                     sh '''

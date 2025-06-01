@@ -31,7 +31,7 @@ pipeline{
         stage("building and push to gcr"){
             steps{
                withCredentials([file(credentialsId:'gcp-key',variable: 'GOOGLE_APPLICATION_CREDENTIALS')]){
-                script(
+                script{
                     echo 'building and pushing to gcr'
                     sh '''
                     export PATH=$PATH:$(GCLOUD_PATH)
@@ -41,7 +41,7 @@ pipeline{
                     docker build -t gcr.io/${GCP_PROJECT}/mlops-test:latest .
                     docker push gcr.io/${GCP_PROJECT}/mlops-test:latest 
                     '''
-                )
+                }
                }
             }
         }

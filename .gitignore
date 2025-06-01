@@ -2,3 +2,4 @@
 mlruns/
 logs/
 MLOps_Project1.egg-info/
+build/

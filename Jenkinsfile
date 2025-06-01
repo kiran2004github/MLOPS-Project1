@@ -57,7 +57,7 @@ pipeline{
                     gcloud config set project ${GCP_PROJECT}
                     gcloud run deploy mlops-test \
                         --image=gcr.io/${GCP_PROJECT}/mlops-test:latest \
-                        --platform=manager \
+                        --platform=managed \
                         --region=us-central1 \
                         --allow-unauthenticated
                     '''
